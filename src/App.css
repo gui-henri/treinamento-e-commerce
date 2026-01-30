@@ -1,0 +1,117 @@
+/* Reset básico para evitar surpresas de layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo Geral do Corpo */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #1a1a1a;
+  /* Fundo escuro moderno */
+  color: #ffffff;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* O container principal da aplicação (geralmente a div #root) */
+#root {
+  width: 100%;
+  max-width: 800px;
+  /* Limita a largura para não ficar esticado */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Títulos */
+h1,
+h2 {
+  text-align: center;
+  color: #646cff;
+  /* A cor roxa padrão do Vite */
+}
+
+/* --- Estilo para o Aluno 3 (Formulário) --- */
+form {
+  background-color: #242424;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+input {
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid #646cff;
+  border-color: transparent;
+}
+
+/* Botões (Serve para todo mundo) */
+button {
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #535bf2;
+}
+
+/* --- Estilo para o Aluno 2 (Lista de Produtos) --- */
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* Grid responsivo automático */
+  gap: 1rem;
+}
+
+li {
+  background-color: #242424;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  /* Efeito de elevação */
+  border-color: #646cff;
+}
+
+/* Feedback visual simples */
+strong {
+  color: #42b883;
+  /* Verde para destacar preços ou avisos */
+}
