@@ -1,18 +1,18 @@
-interface Product {
+export interface Product {
     id: number;
     title: string;
     description: string;
     price: number;
 }
 
-interface GetProductsDTO {
+export interface GetProductsDTO {
     products: Product[];
 }
 
-export async function getProducts(): Promise<GetProductsDTO> {
+export async function getProducts(): Promise<Product[]> {
     const response = await fetch('https://dummyjson.com/products');
     const data: GetProductsDTO = await response.json();
-    return data;
+    return data.products;
 }
 
 export async function postProduts(product: Product): Promise<void> {
